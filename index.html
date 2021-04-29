@@ -42,33 +42,15 @@
     </style>
 </head>
 <body>
+  <input type="checkbox" id="chkbox" onchange="func()" checked><a> Generate only actual titles</a></br>
     <a id="title"> Hentai<wbr>Search <i>(beta) </i></a></div>
-    <input type="button" id="search" class="btn btn-primary" onclick="search()" value = "Search">
-    <a id="support" style="position: absolute; color: white; margin-top: 96vh;">  ᠌Support: <wbr>hentaisearchdev@gmail.com</a>
+    <input type="button" id="search" class="btn btn-primary" onclick="search()" value = "Generate link">
+    <a id="support" style="position: absolute; color: white; margin-top: 94vh;">  ᠌Support: <wbr>hentaisearchdev@gmail.com</a>
     <script>
-      // Screen Optimization: Galaxy S9/S9+ etc., iPad, iPad mini, ~ Laptop.
-      var title = document.getElementById("title");
-
-      if(window.innerWidth >= 1024){
-        title.style.marginLeft = "41vw";
-        title.style.marginRight = "41vw";
-      }
-      if(window.innerWidth >= 1280){
-        title.style.marginLeft = "43vw";
-        title.style.marginRight = "43vw";
-      }
-      if(window.innerWidth <= 768){
-        title.style.marginLeft = "38vw";
-        title.style.marginRight = "38vw";
-      }
-      if(window.innerWidth == 740){
-        title.style.marginLeft = "37vw";
-        title.style.marginRight = "37vw";
-      }
-      if(window.innerWidth <= 360){
-        title.style.marginLeft = "25vw";
-        title.style.marginRight = "25vw";
-      }
+      // Screen Optimization: Galaxy S9/S9+ etc., iPhone 6/7/8 iOS 11, iPad, iPad mini, ~ Laptop.
+      var title=document.getElementById("title");window.innerWidth>=1024&&(title.style.marginLeft="41vw",title.style.marginRight="41vw"),window.innerWidth>=1280&&(title.style.marginLeft="42vw",title.style.marginRight="42vw"),window.innerWidth<=768&&(title.style.marginLeft="38vw",title.style.marginRight="38vw"),740==window.innerWidth&&(title.style.marginLeft="37vw",title.style.marginRight="37vw"),window.innerWidth<=667&&(title.style.marginLeft="36vw",title.style.marginRight="36vw"),window.innerWidth<=360&&(title.style.marginLeft="25vw",title.style.marginRight="25vw"),window.innerWidth<=375&&(title.style.marginLeft="24vw",title.style.marginRight="24vw");
+      // Checkbox
+      let chkbox=document.getElementById("chkbox");function func(){chkbox.checked&&(assistVariable=6),chkbox.checked||(assistVariable=2)}chkbox.checked&&(assistVariable=6);
     </script>
 </body>
 </html>
