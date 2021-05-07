@@ -1,4 +1,4 @@
-<!-- hsu21507 -->
+<!-- hsu21507p2 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,10 +28,8 @@
         background-color: white;
         border: 4px solid white;
         border-radius: 6px;
-        width: 13.5%;
-        margin-left: 43.25%;
-        margin-right: 43.25%;
-        margin-top: 35vh;
+        width: 182px;
+        margin-top: 34vh;
         font-size: 20px;
         position: absolute;
       }
@@ -50,15 +48,25 @@
     </style>
 </head>
 <body>
-  <input type="checkbox" id="chkbox" onchange="func()" checked><a> </a><a style="background-color: white; border: 2px solid white;border-radius: 4px;">Generate only actual titles</a></br>
+  <input type="checkbox" id="chkbox" onchange="$checkbox()" checked><a> </a><a style="background-color: white; border: 2px solid white;border-radius: 4px;">Generate only actual titles</a></br>
     <a id="title"> Hentai<wbr>Search <i>(beta) </i></a></div>
     <input type="button" id="search" class="btn btn-primary" onclick="search()" value = "Generate link">
     <a id="support" style="position: absolute; color: white; margin-top: 94vh;">  ᠌Support: <wbr>hentaisearchdev@gmail.com</a>
     <script>
+      // Optimization (OMG I HAVE FINALLY DID IT!)
+      function $A(){
+        let title = document.getElementById("title");
+        let variable = (window.innerWidth - title.offsetWidth) / 2;
+        title.style.marginLeft = variable + "px";
+        title.style.marginRight = variable + "px";
+      }
+      $A();
+      window.addEventListener("orientationchange", function(){$A();}, false);
+
       // Checkbox
       let checkbox = document.getElementById("chkbox");
       if(checkbox.checked) v = 6;
-      function func(){
+      function $checkbox(){
         if(checkbox.checked) v = 6;
         if(!checkbox.checked) v = 3;
       }
