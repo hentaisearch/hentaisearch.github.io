@@ -1,4 +1,4 @@
-<!-- hsu21509p2 -->
+<!-- hsu21510 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,18 +24,35 @@
         background-color: #464646; 
       }
 
+      #chkbox {
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 2px; 
+        width: 18px; 
+        height: 18px;
+      }
+
+      #chkbox-text {
+        background-color: whitesmoke; 
+        border: 2px solid white; 
+        border-radius: 4px; 
+        position: absolute; 
+        margin-top: 5px; 
+        margin-left: 22px;
+      }
+
       #title {
         background-color: whitesmoke;
         border: 4px solid whitesmoke;
         border-radius: 6px;
         width: 187px;
-        margin-top: 33vh;
+        margin-top: 31.5vh;
         font-size: 20px;
         position: absolute;
       }
 
       #search {
-        margin-top: 42vh;
+        margin-top: 41vh;
         margin-left: 10%;
         margin-right: 10%;
         position: absolute;
@@ -77,19 +94,20 @@
 </head>
 <body>
   <a id="generation_parameters" style="margin-left: 2px; color: whitesmoke;">Generation parameters: </a><br>
-  <select name="nhentai_service" id="nhs" onchange="$S();" style="margin-left: 2px; border-radius: 5px;">
+  <select name="nhentai_service" id="nhs" onchange="$S();" style="margin-left: 2px; border-radius: 5px; height: 30px;">
     <option disabled>Choose nhentai service: </option>
+    <option value="empty" disabled> </option>
     <option value="t1" selected>nhentai.net</option>
     <option value="t3">nhentai.xxx</option>
-    <option value="t2">nhentai.com</option>
+    <option value="t2" disabled>nhentai.com</option>
   </select>
   <br>
-  <input type="checkbox" id="chkbox" onchange="$checkbox()" style="position: absolute; margin-top: 12px; margin-left: 2px; width: 15px; height: 15px;" checked><a> </a><a style="background-color: whitesmoke; border: 2px solid white; border-radius: 4px; position: absolute; margin-top: 5px; margin-left: 20px;">Generate only six-digit codes</a></br>
+  <input type="checkbox" id="chkbox" onchange="$checkbox()" checked><a> </a><a id="chkbox-text">Generate only six-digit codes</a></br>
     <a id="title"> Hentai<wbr>Search <i>(beta) </i></a></div>
     <a id="text-under-button"> Generating link </a>
     <input type="button" id="search" class="btn btn-primary" onclick="search()" value = "Generate link">
     <a id="support"> ᠌Support: <wbr>hentaisearchdev@gmail.com</a>
-    <a id="updates-title" class="text-right">Uptades: </a>
+    <a id="updates-title" class="text-right">Updates: </a>
     <a id="updates-href" href="https://t.me/hentaisearchdev"> t.me/hentaisearchdev </a>
     <script>
       // Optimization
