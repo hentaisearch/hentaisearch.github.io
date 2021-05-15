@@ -1,4 +1,4 @@
-<!-- hsu21512 -->
+<!-- hsu21514 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,8 +22,8 @@
   <select name="nhentai_service" id="nhs" onchange="$S();" style="margin-left: 2px; border-radius: 5px; height: 30px;">
     <option disabled>Choose nhentai service: </option>
     <option value="t1" selected>nhentai.net</option>
-    <option value="t3">nhentai.xxx</option>
-    <option value="t2" disabled>nhentai.com</option>
+    <option value="t2">nhentai.xxx</option>
+    <option value="t3">nhentai.com</option>
   </select>
   <br>
   <input type="checkbox" id="checkbox" onchange="$checkbox()" checked><a> </a><a id="checkbox-text">Generate only six-digit codes</a></br>
@@ -33,19 +33,11 @@
     <a id="text-under-button"> Generating link </a>
     <input type="button" id="search" class="btn btn-primary" onclick="search()" value = "Generate link">
     <a id="White"> </a> 
-    <a id="support"> ᠌Support: <wbr>hentaisearchdev@gmail.com</a>
     <a id="updates-title" class="text-right">Updates: </a>
     <a id="updates-href" href="https://t.me/hentaisearchdev"> t.me/hentaisearchdev </a>
+    <a id="support"> ᠌Support: <wbr>hentaisearchdev@gmail.com</a>
     <script>
       // Optimization
-      let scrollHeight = Math.max(
-      document.body.scrollHeight, document.documentElement.scrollHeight,
-      document.body.offsetHeight, document.documentElement.offsetHeight,
-      document.body.clientHeight, document.documentElement.clientHeight
-      );
-
-      console.log(scrollHeight);
-
       // $A() Elements
         let title = document.getElementById("title");
         let darktheme_checkbox = document.getElementById("checkbox2");
@@ -58,14 +50,13 @@
         let title_variable = (document.documentElement.clientWidth - title.offsetWidth) / 2;
         title.style.marginLeft = title_variable + "px";
         title.style.marginRight = title_variable + "px";
-
+        
         // DarkTheme
         let darkthemetext_variable = (100 * (document.documentElement.clientWidth - darktheme_text.offsetWidth)) / document.documentElement.clientWidth;
         darktheme_text.style.marginLeft = (darkthemetext_variable - 0.5) + "%";
 
         let darkthemecheckbox_variable = (100 * (document.documentElement.clientWidth - darktheme_text.offsetWidth - darktheme_checkbox.offsetWidth)) / document.documentElement.clientWidth;
         darktheme_checkbox.style.marginLeft = (darkthemecheckbox_variable - 0.75) + "%";
-      }
 
       window.addEventListener("orientationchange", function(){$A();}, false);
 
@@ -81,31 +72,34 @@
       let darktheme = document.getElementById("checkbox2");
       if(checkbox2.checked) {
         document.body.style.backgroundImage = "url()"
-        document.body.style.backgroundColor = "#2F4F4F";
+        document.body.style.backgroundColor = "#1d3030";
         darktheme_text.style.backgroundColor = "whitesmoke";
         darktheme_text.style.color = "#000000";
         title.style.backgroundColor = "whitesmoke";
         title.style.color = "#000000";
         title.style.border = "4px solid whitesmoke";
+        document.getElementById("checkbox-text2").style.border = "2px solid whitesmoke";
       }
       function $darktheme(){
         if(checkbox2.checked) {
         document.body.style.backgroundImage = "url()"
-        document.body.style.backgroundColor = "#2F4F4F";
+        document.body.style.backgroundColor = "#1d3030";
         darktheme_text.style.backgroundColor = "whitesmoke";
         darktheme_text.style.color = "#000000";
         title.style.backgroundColor = "whitesmoke";
         title.style.color = "#000000";
         title.style.border = "4px solid whitesmoke";
+        document.getElementById("checkbox-text2").style.border = "2px solid whitesmoke";
         }
         if(!checkbox2.checked) {
           document.body.style.backgroundColor = "";
-          document.body.style.backgroundImage = "url(background.webp)";
+          document.body.style.backgroundImage = "url(background.png)";
           darktheme_text.style.backgroundColor = "#000000";
           darktheme_text.style.color = "whitesmoke";
           title.style.backgroundColor = "#000000";
           title.style.color = "whitesmoke";
           title.style.border = "4px solid #000000";
+          darktheme_text.style.border = "2px solid #000000";
         }
       }
 

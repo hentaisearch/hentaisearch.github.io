@@ -1,5 +1,5 @@
 body {
-        background-image: url(background.webp);
+        background-image: url(background.png);
         background-position: center center;      
         background-repeat: no-repeat;      
         background-attachment: fixed;      
@@ -37,7 +37,8 @@ body {
         background-color: #000000;
         border: 2px solid #000000;
         border-radius: 4px;
-        width: 91px;
+        width: 94px;
+        text-align: center;
         position: absolute;
       }
 
@@ -78,7 +79,7 @@ body {
         border: 2px solid whitesmoke; 
         border-radius: 4px; 
         width: 276px;
-        height: 46px;
+        height: 45px;
       }
 
       #updates-title {
