@@ -1,4 +1,4 @@
-<!-- hsu21514 -->
+<!-- hsu21514p2 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +35,7 @@
     <a id="White"> </a> 
     <a id="updates-title" class="text-right">Updates: </a>
     <a id="updates-href" href="https://t.me/hentaisearchdev"> t.me/hentaisearchdev </a>
-    <a id="support"> ᠌Support: <wbr>hentaisearchdev@gmail.com</a>
+    <a id="support">Support: <wbr>hentaisearchdev@gmail.com</a>
     <script>
       // Optimization
       // $A() Elements
@@ -50,13 +50,14 @@
         let title_variable = (document.documentElement.clientWidth - title.offsetWidth) / 2;
         title.style.marginLeft = title_variable + "px";
         title.style.marginRight = title_variable + "px";
-        
+
         // DarkTheme
         let darkthemetext_variable = (100 * (document.documentElement.clientWidth - darktheme_text.offsetWidth)) / document.documentElement.clientWidth;
         darktheme_text.style.marginLeft = (darkthemetext_variable - 0.5) + "%";
 
         let darkthemecheckbox_variable = (100 * (document.documentElement.clientWidth - darktheme_text.offsetWidth - darktheme_checkbox.offsetWidth)) / document.documentElement.clientWidth;
         darktheme_checkbox.style.marginLeft = (darkthemecheckbox_variable - 0.75) + "%";
+      }
 
       window.addEventListener("orientationchange", function(){$A();}, false);
 
