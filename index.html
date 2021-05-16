@@ -1,4 +1,4 @@
-<!-- hsu21514p5 -->
+<!-- hsu21515 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,13 +56,13 @@
 
         // DarkTheme
         let darkthemetext_variable = document.documentElement.clientWidth - darktheme_text.offsetWidth;
-        darktheme_text.style.marginLeft = (darkthemetext_variable - (percentinpx * 0.5)) + "px";
+        darktheme_text.style.marginLeft = darkthemetext_variable - (percentinpx * 0.5) + "px";
 
         let darkthemecheckbox_variable = document.documentElement.clientWidth - darktheme_text.offsetWidth - darktheme_checkbox.offsetWidth;
-        darktheme_checkbox.style.marginLeft = ((darkthemecheckbox_variable) - (percentinpx * 0.75)) + "px";
+        darktheme_checkbox.style.marginLeft = darkthemecheckbox_variable - (percentinpx * 0.75) + "px";
       }
 
-      window.addEventListener("orientationchange", function(){$A();}, false);
+      window.addEventListener("orientationchange", function(){$A()}, false);
 
       // Checkbox
       let checkbox = document.getElementById("checkbox");
