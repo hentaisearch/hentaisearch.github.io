@@ -1,4 +1,4 @@
-<!-- hsu21518 -->
+<!-- hsu21518p2 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,7 @@
     <a id="support">Support: <wbr>hentaisearchdev@gmail.com</a>
     <script>
       // Optimization
-      
+
       let percentinpx=document.documentElement.clientWidth/100*1,pxinpercent=100*(document.documentElement.clientWidth-(document.documentElement.clientWidth-1))/document.documentElement.clientWidth,title=document.getElementById("title"),darktheme_checkbox=document.getElementById("checkbox2"),darktheme_text=document.getElementById("checkbox-text2");function $A(){let e=(document.documentElement.clientWidth-title.offsetWidth)/2;title.style.marginLeft=e+"px",title.style.marginRight=e+"px";let t=document.documentElement.clientWidth-darktheme_text.offsetWidth;darktheme_text.style.marginLeft=t-.5*percentinpx+"px";let n=document.documentElement.clientWidth-darktheme_text.offsetWidth-darktheme_checkbox.offsetWidth;darktheme_checkbox.style.marginLeft=n-.75*percentinpx+"px"}$A(),window.addEventListener("orientationchange",function(){$A()},!1);
 
       // Checkbox
@@ -48,10 +48,13 @@
         if(checkbox.checked) v = 6;
         if(!checkbox.checked) v = 3;
       }
-
+    
       // Dark Theme
+
+      document.onload($darktheme(), $S());
+
       let darktheme = document.getElementById("checkbox2");
-      if(checkbox2.checked) {
+/*      if(checkbox2.checked) {
         document.body.style.backgroundImage = "url()"
         document.body.style.backgroundColor = "#303030";
         darktheme_text.style.backgroundColor = "whitesmoke";
@@ -60,7 +63,7 @@
         title.style.color = "#000000";
         title.style.border = "4px solid whitesmoke";
         document.getElementById("checkbox-text2").style.border = "2px solid whitesmoke";
-      }
+      }*/
       function $darktheme(){
         if(checkbox2.checked) {
         document.body.style.backgroundImage = "url()"
@@ -85,7 +88,7 @@
       }
 
       // Select
-      $S();
+      //$S();
 
       function $S(){
         let nhs = document.getElementById("nhs").selectedIndex;
