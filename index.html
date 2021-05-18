@@ -1,4 +1,4 @@
-<!-- hsu21515 -->
+<!-- hsu21518 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,31 +38,8 @@
     <a id="support">Support: <wbr>hentaisearchdev@gmail.com</a>
     <script>
       // Optimization
-      let percentinpx = document.documentElement.clientWidth / 100 * 1;
-      let pxinpercent = 100 * (document.documentElement.clientWidth - (document.documentElement.clientWidth - 1)) / document.documentElement.clientWidth
-
-      // $A() Elements
-        let title = document.getElementById("title");
-        let darktheme_checkbox = document.getElementById("checkbox2");
-        let darktheme_text = document.getElementById("checkbox-text2");
-
-      $A();
-
-      function $A(){
-        // Title
-        let title_variable = (document.documentElement.clientWidth - title.offsetWidth) / 2;
-        title.style.marginLeft = title_variable + "px";
-        title.style.marginRight = title_variable + "px";
-
-        // DarkTheme
-        let darkthemetext_variable = document.documentElement.clientWidth - darktheme_text.offsetWidth;
-        darktheme_text.style.marginLeft = darkthemetext_variable - (percentinpx * 0.5) + "px";
-
-        let darkthemecheckbox_variable = document.documentElement.clientWidth - darktheme_text.offsetWidth - darktheme_checkbox.offsetWidth;
-        darktheme_checkbox.style.marginLeft = darkthemecheckbox_variable - (percentinpx * 0.75) + "px";
-      }
-
-      window.addEventListener("orientationchange", function(){$A()}, false);
+      
+      let percentinpx=document.documentElement.clientWidth/100*1,pxinpercent=100*(document.documentElement.clientWidth-(document.documentElement.clientWidth-1))/document.documentElement.clientWidth,title=document.getElementById("title"),darktheme_checkbox=document.getElementById("checkbox2"),darktheme_text=document.getElementById("checkbox-text2");function $A(){let e=(document.documentElement.clientWidth-title.offsetWidth)/2;title.style.marginLeft=e+"px",title.style.marginRight=e+"px";let t=document.documentElement.clientWidth-darktheme_text.offsetWidth;darktheme_text.style.marginLeft=t-.5*percentinpx+"px";let n=document.documentElement.clientWidth-darktheme_text.offsetWidth-darktheme_checkbox.offsetWidth;darktheme_checkbox.style.marginLeft=n-.75*percentinpx+"px"}$A(),window.addEventListener("orientationchange",function(){$A()},!1);
 
       // Checkbox
       let checkbox = document.getElementById("checkbox");
@@ -76,7 +53,7 @@
       let darktheme = document.getElementById("checkbox2");
       if(checkbox2.checked) {
         document.body.style.backgroundImage = "url()"
-        document.body.style.backgroundColor = "#1d3030";
+        document.body.style.backgroundColor = "#303030";
         darktheme_text.style.backgroundColor = "whitesmoke";
         darktheme_text.style.color = "#000000";
         title.style.backgroundColor = "whitesmoke";
@@ -87,7 +64,7 @@
       function $darktheme(){
         if(checkbox2.checked) {
         document.body.style.backgroundImage = "url()"
-        document.body.style.backgroundColor = "#1d3030";
+        document.body.style.backgroundColor = "#303030";
         darktheme_text.style.backgroundColor = "whitesmoke";
         darktheme_text.style.color = "#000000";
         title.style.backgroundColor = "whitesmoke";

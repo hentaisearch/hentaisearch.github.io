@@ -28,7 +28,7 @@ body {
         position: absolute;
         width: 25px;
         height: 25px;
-        margin-top: 2.5px;
+        margin-top: 3.6px;
       }
 
       #checkbox-text2 {
@@ -49,13 +49,13 @@ body {
         border-radius: 6px;
         width: 185.5px;
         height: 37px;
-        margin-top: 31.5vh;
+        margin-top: 30.5vh;
         font-size: 20px;
         position: absolute;
       }
 
       #search {
-        margin-top: 41vh;
+        margin-top: 40vh;
         margin-left: 10%;
         margin-right: 10%;
         position: absolute;
@@ -79,7 +79,7 @@ body {
         border: 2px solid whitesmoke; 
         border-radius: 4px; 
         width: 276px;
-        height: 45px;
+        height: 46px;
       }
 
       #updates-title {
