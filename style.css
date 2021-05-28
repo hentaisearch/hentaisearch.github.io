@@ -4,7 +4,7 @@ body {
         background-repeat: no-repeat;      
         background-attachment: fixed;      
         background-size: cover;      
-        background-color: #464646; 
+        background-color: #303030; 
       }
 
       #checkbox {
@@ -17,10 +17,33 @@ body {
 
       #checkbox-text {
         background-color: whitesmoke; 
-        border: 2px solid whitesmoke; 
+        border: 4px solid whitesmoke; 
         border-radius: 4px; 
-        position: absolute; 
+        position: absolute;
+        height: 27.2px;
+        line-height: 21px;
+        text-align: center;
         margin-top: 5px; 
+        margin-left: 31px;
+      }
+
+      #autosave {
+        position: absolute;
+        margin-top: 16px;
+        margin-left: 2px; 
+        width: 25px; 
+        height: 25px;
+      }
+
+      #autosave-text {
+        background-color: whitesmoke; 
+        border: 4px solid whitesmoke; 
+        border-radius: 4px; 
+        position: absolute;
+        height: 27.2px; 
+        line-height: 21px;
+        text-align: center;
+        margin-top: 13px; 
         margin-left: 31px;
       }
 
@@ -47,10 +70,10 @@ body {
         border: 4px solid #000000;
         color: whitesmoke;
         border-radius: 6px;
-        width: 185.5px;
-        height: 37px;
+        width: 150px;
+        height: 45px;
         margin-top: 30.5vh;
-        font-size: 20px;
+        font-size: 24px;
         position: absolute;
       }
 
@@ -67,9 +90,14 @@ body {
       }
 
       #text-under-button {
-        /* Next update */
-        margin-top: 45vh;
-        display: none
+        display: none;
+        color: orange;
+        background-color: 282828;
+        border: 8px solid 282828;
+        border-radius: 4px;
+        width: 135px;
+        position: absolute;
+        margin-top: 49.5vh;
       }
 
       #White {
@@ -93,7 +121,7 @@ body {
       #updates-href {
         position: absolute;
         margin-top: 95.5vh;
-        margin-left: 70.5px;
+        margin-left: 69.5px;
         text-decoration: none;
       }
 
