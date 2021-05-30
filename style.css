@@ -72,6 +72,7 @@ body {
         border-radius: 6px;
         width: 153px;
         height: 45px;
+        text-align: center;
         margin-top: 30.5vh;
         font-size: 24px;
         position: absolute;
@@ -92,10 +93,10 @@ body {
       #text-under-button {
         display: none;
         color: orange;
-        background-color: 282828;
-        border: 8px solid 282828;
+        background-color: #282828;
+        border: 8px solid #282828;
         border-radius: 4px;
-        width: 135px;
+        /*width: 135px;*/
         position: absolute;
         margin-top: 49.5vh;
       }
