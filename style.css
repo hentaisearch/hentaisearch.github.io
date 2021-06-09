@@ -93,10 +93,9 @@ body {
       #text-under-button {
         display: none;
         color: orange;
-        background-color: #282828;
-        border: 8px solid #282828;
+        background-color: #1C1B22;
+        border: 8px solid #1C1B22;
         border-radius: 4px;
-        /*width: 135px;*/
         position: absolute;
         margin-top: 49.5vh;
       }
