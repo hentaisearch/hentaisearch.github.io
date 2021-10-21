@@ -1,4 +1,4 @@
-<!-- hsv21809 (patch2) -->
+<!-- hsv211021 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +24,7 @@
     <option value="t1" selected>nhentai.net</option>
     <option value="t2">nhentai.xxx</option>
     <option value="t3">nhentai.com</option>
+    <option value="t4">hentai.name</option>
   </select>
   <br>
   <input type="checkbox" id="checkbox" onchange="$checkbox()" checked><a id="checkbox-text">Generate only six-digit codes</a></br>
@@ -37,10 +38,21 @@
     <a id="updates-title" class="text-right">Updates: </a>
     <a id="updates-href" href="https://t.me/hentaisearchdev"> t.me/hentaisearchdev </a>
     <a id="support">Support: <wbr>hentaisearchdev@gmail.com</a>
+    <!--LiveInternet counter-->
+    <a href="https://www.liveinternet.ru/click" id="counter"
+      target="_blank"><img id="licnt1951" width="88" height="15" style="border:0" 
+      title="LiveInternet: показано число посетителей за сегодня"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+      alt=""/></a><script>(function(d,s){d.getElementById("licnt1951").src=
+      "https://counter.yadro.ru/hit?t26.6;r"+escape(d.referrer)+
+      ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+      (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+      ";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+      (document,screen)</script>
+    <!--/LiveInternet counter-->
+
     <script>
-
-      window.onload=function(){$darktheme(!0),$autosave(),$S()};let percentinpx=document.documentElement.clientWidth/100*1,title=document.getElementById("title"),darktheme_checkbox=document.getElementById("darktheme_checkbox"),darktheme_text=document.getElementById("darktheme_checkbox_text"),textUnderButton=document.getElementById("text-under-button"),support_text=document.getElementById("support");var ScreenWidth;function $A(){let e=(ScreenWidth-title.offsetWidth)/2;title.style.marginLeft=e+"px",title.style.marginRight=e+"px";let t=document.documentElement.clientWidth-darktheme_text.offsetWidth-.5*percentinpx;darktheme_text.style.marginLeft=t+"px";let n=t-darktheme_checkbox.offsetWidth-4;darktheme_checkbox.style.marginLeft=n+"px"}function $tub(){let e=(document.documentElement.clientWidth-textUnderButton.offsetWidth)/2;textUnderButton.style.marginLeft=e+"px",textUnderButton.style.marginRight=e+"px"}window.innerWidth>1024&&(ScreenWidth=document.documentElement.clientWidth),window.innerWidth<=1024&&(ScreenWidth=window.innerWidth),$A(),window.innerHeight<=444&&(support_text.style.marginTop="99.8vh"),window.innerHeight>=740&&(support_text.style.marginTop="97.5vh"),window.addEventListener("orientationchange",function(){$A()},!1);let checkbox=document.getElementById("checkbox");function $checkbox(){checkbox.checked&&(v=6),checkbox.checked||(v=3)}checkbox.checked&&(v=6);let darktheme=document.getElementById("darktheme_checkbox");function $darktheme(e){switch(!0!==e&&(window.location.hash=""),window.location.hash){case"#dark":t(),console.log("dark"),darktheme.checked=!0;break;case"#light":n(),console.log("light"),darktheme.checked=!1}function t(){document.body.style.backgroundImage="url()",document.body.style.backgroundColor="#1C1B22",darktheme_text.style.backgroundColor="whitesmoke",darktheme_text.style.color="#000000",title.style.backgroundColor="whitesmoke",title.style.color="#000000",title.style.border="4px solid whitesmoke",document.getElementById("darktheme_checkbox_text").style.border="2px solid whitesmoke",window.location.href=window.location.pathname+"#dark"}function n(){document.body.style.backgroundColor="",document.body.style.backgroundImage="url(background.png)",darktheme_text.style.backgroundColor="#000000",darktheme_text.style.color="whitesmoke",title.style.backgroundColor="#000000",title.style.color="whitesmoke",title.style.border="4px solid #000000",darktheme_text.style.border="2px solid #000000",window.location.href=window.location.pathname+"#light"}darktheme_checkbox.checked&&t(),darktheme_checkbox.checked||n()}function $S(){let e=document.getElementById("nhs").selectedIndex,t=document.getElementById("nhs").options;"nhentai.xxx"===t[e].text?nhentai_domain_ending="xxx":"nhentai.net"===t[e].text?nhentai_domain_ending="net":"nhentai.com"===t[e].text?nhentai_domain_ending="com":console.log("wth?")}function $autosave(){let e=document.getElementById("autosave");e.checked&&(autosave_enabled=!0),e.checked||(autosave_enabled=!1)}
-
+      window.onload=function(){$darktheme(!0),$autosave(),$S()};let percentinpx=document.documentElement.clientWidth/100*1,title=document.getElementById("title"),darktheme_checkbox=document.getElementById("darktheme_checkbox"),darktheme_text=document.getElementById("darktheme_checkbox_text"),textUnderButton=document.getElementById("text-under-button"),support_text=document.getElementById("support");var ScreenWidth;function $A(){let e=(ScreenWidth-title.offsetWidth)/2;title.style.marginLeft=e+"px",title.style.marginRight=e+"px";let t=document.documentElement.clientWidth-darktheme_text.offsetWidth-.5*percentinpx;darktheme_text.style.marginLeft=t+"px";let n=t-darktheme_checkbox.offsetWidth-4;darktheme_checkbox.style.marginLeft=n+"px"}function $tub(){let e=(document.documentElement.clientWidth-textUnderButton.offsetWidth)/2;textUnderButton.style.marginLeft=e+"px",textUnderButton.style.marginRight=e+"px"}window.innerWidth>1024&&(ScreenWidth=document.documentElement.clientWidth),window.innerWidth<=1024&&(ScreenWidth=window.innerWidth),$A(),window.innerHeight<=444&&(support_text.style.marginTop="99.8vh",document.getElementById("counter").style.marginTop="104.5vh"),window.innerHeight>=740&&(support_text.style.marginTop="97.5vh",document.getElementById("counter").style.marginTop="99.5vh"),window.addEventListener("orientationchange",function(){$A()},!1);let checkbox=document.getElementById("checkbox");function $checkbox(){checkbox.checked&&(v=6),checkbox.checked||(v=3)}checkbox.checked&&(v=6);let darktheme=document.getElementById("darktheme_checkbox");function $darktheme(e){switch(!0!==e&&(window.location.hash=""),window.location.hash){case"#dark":t(),console.log("dark"),darktheme.checked=!0;break;case"#light":n(),console.log("light"),darktheme.checked=!1}function t(){document.body.style.backgroundImage="url()",document.body.style.backgroundColor="#1C1B22",darktheme_text.style.backgroundColor="whitesmoke",darktheme_text.style.color="#000000",title.style.backgroundColor="whitesmoke",title.style.color="#000000",title.style.border="4px solid whitesmoke",document.getElementById("darktheme_checkbox_text").style.border="2px solid whitesmoke",window.location.href=window.location.pathname+"#dark"}function n(){document.body.style.backgroundColor="",document.body.style.backgroundImage="url(background.png)",darktheme_text.style.backgroundColor="#000000",darktheme_text.style.color="whitesmoke",title.style.backgroundColor="#000000",title.style.color="whitesmoke",title.style.border="4px solid #000000",darktheme_text.style.border="2px solid #000000",window.location.href=window.location.pathname+"#light"}darktheme_checkbox.checked&&t(),darktheme_checkbox.checked||n()}function $S(){let e=document.getElementById("nhs").selectedIndex,t=document.getElementById("nhs").options;"nhentai.xxx"===t[e].text?(nhentai_domain="nhentai.",nhentai_domain_ending="xxx"):"nhentai.net"===t[e].text?(nhentai_domain="nhentai.",nhentai_domain_ending="net"):"nhentai.com"===t[e].text?(nhentai_domain="nhentai.",nhentai_domain_ending="com"):"hentai.name"===t[e].text?(nhentai_domain="hentai.",nhentai_domain_ending="name"):console.log("wth?")}function $autosave(){let e=document.getElementById("autosave");e.checked&&(autosave_enabled=!0),e.checked||(autosave_enabled=!1)}
     </script>
 </body>
 </html>
