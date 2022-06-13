@@ -1,0 +1,26 @@
+{
+  "name": "hentaisearch.github.io",
+  "version": "1.0.0",
+  "description": "https://hentaisearch.github.io",
+  "main": "index.html",
+  "scripts": {
+    "test": "node -v",
+    "sass": "sass --watch styles/styles.sass styles/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hentaisearch/hentaisearch.github.io.git"
+  },
+  "keywords": [
+    "hentaisearch"
+  ],
+  "author": "hentaisearch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hentaisearch/hentaisearch.github.io/issues"
+  },
+  "homepage": "https://github.com/hentaisearch/hentaisearch.github.io#readme",
+  "devDependencies": {
+    "sass": "^1.52.3"
+  }
+}

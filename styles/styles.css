@@ -1,0 +1,13 @@
+body {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #303030;
+}
+
+#container_top {
+  display: flex;
+}
+
+/*# sourceMappingURL=styles.css.map */
