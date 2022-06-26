@@ -1,7 +1,6 @@
-<!-- 2022.0-pre -->
-
 <!DOCTYPE html>
 <html lang="en">
+<!-- 2022.0-pre -->
 
 <head>
   <meta charset="UTF-8">
@@ -11,45 +10,79 @@
   <!-- favicon -->
   <!-- <link rel="shortcut icon" href="./assets/favicon.png" type="image/png"> -->
   <!-- styles -->
-  <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
-  <!-- scripts -->
-  <!-- <script defer src="./scripts/_index.js"></script> -->
-  <!-- <script defer src="./scripts/_script.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="./styles/styles.post.css" />
+  <!-- JQuery -->
+  <script defer src="./libs/jquery/jquery-3.6.0.min.js"></script>
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+  <link href="./libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- scripts -->
+  <script defer src="./scripts/index.js"></script>
+  <script defer src="./scripts/script.js"></script>
 </head>
 
 <body>
-  <div id="container_top">
-    <div id="container_top-left">
-      <a id="text_generation-parameters">Generation parameters: </a>
-      <select name="domain-selector" id="select_domains" onchange="">
-        <option disabled>Domain: </option>
-        <option value="d1" selected>nhentai.net</option>
-        <option value="d2">nhentai.com</option>
-        <option value="d3">nhentai.xxx</option>
-        <option value="d4">hentai.name</option>
-      </select>
-      <input type="checkbox" id="checkbox_six-digit-codes" onchange="" checked>
-      <a id="checkbox-text">Generate only six-digit codes</a>
-      <input type="checkbox" id="checkbox_link-autosave" onchange="">
-      <a id="text_link_autosave">Link auto-save</a>
+  <div id="view">
+    <div id="-container-top">
+      <div id="-wrapper-top-left">
+        <div id="-container-top-left">
+          <div id="-container-select-domains">
+            <a id="-text-generation-parameters">Generation parameters: </a>
+            <select name="domain-selector" id="-select-domains" onchange="onSelectDomain(this)">
+              <option disabled>Domain: </option>
+              <option value="nhentai.net" selected>nhentai.net</option>
+              <option value="nhentai.com">nhentai.com</option>
+              <option value="nhentai.xxx">nhentai.xxx</option>
+              <option value="hentai.name">hentai.name</option>
+            </select>
+          </div>
+          <div id="-container-six-digit-codes">
+            <input type="checkbox" id="-checkbox-six-digit-codes" onchange="onCheckboxSixDigitCodes(this)" checked>
+            <a id="-text-six-digit-codes" onclick="toggleCheckbox(this);">Generate only six-digit codes</a>
+          </div>
+          <div id="-container-stay-on-the-same-tab">
+            <input type="checkbox" id="-checkbox-stay-on-the-same-tab" onchange="onCheckboxStayOnTheSameTab(this)">
+            <a id="-text-stay-on-the-same-tab" onclick="toggleCheckbox(this)">Stay on the same tab</a>
+          </div>
+          <div id="-container-link-autosave">
+            <input type="checkbox" id="-checkbox-link-autosave" onchange="onCheckboxLinkAutosave(this)">
+            <a id="-text-link-autosave" onclick="toggleCheckbox(this)">Link auto-save</a>
+          </div>
+        </div>
+      </div>
+      <div id="-container-top-right">
+        <div id="-container-darktheme-toggle">
+          <input type="checkbox" id="-checkbox-darktheme-toggle" onchange="onCheckboxDarkThemeToggle(this)">
+          <a id="-text-darktheme-toggle" onclick="toggleCheckbox(this)">Dark Theme</a>
+        </div>
+      </div>
     </div>
-    <div id="container_top-right">
-      <input type="checkbox" id="checkbox_darktheme-toggle" onchange="">
-      <a id="text_darktheme-toggle">Dark Theme</a>
+    <div id="-container-center">
+      <div id="-container-title">
+        <a id="-text-title">HentaiSearch</a>
+      </div>
+      <div id="-container-generate">
+        <input type="button" id="-button-generate" class="btn btn-primary" onclick="Open()" value="Generate link">
+      </div>
+      <div id="-container-generating-link">
+        <a id="-text-generating-link">&nbsp;Generating link...&nbsp;</a>
+      </div>
     </div>
-    <a id="text_TITLE"> Hentai<wbr>Search</a>
-    <input type="button" id="button_search" class="btn btn-primary" onclick="" value="Generate link">
-    <a id="text_generating-link">Generating link...</a>
-    <!--   <a id="White"> </a>
-  <a id="updates-title" class="text-right">Updates: </a>
-  <a id="updates-href" href="https://t.me/hentaisearchdev"> t.me/hentaisearchdev </a>
-  <a id="support">Support: <wbr>hentaisearchdev@gmail.com</a> -->
+  </div>
+  <div id="-container-bottom">
+    <div id="-container-bottom-updates">
+      <a id="-text-updates" style="text-decoration: none">Updates: </a>
+      <a id="-href-updates" href="https://t.me/hentaisearchdev" style="text-decoration: none; font-weight: bold;"> t.me/hentaisearchdev </a>
+    </div>
+    <a id="-text-support">Support: <wbr>hentaisearchdev@gmail.com</a>
+    <!-- <a id="" href="#" style="text-decoration: none; font-weight: bold;">Buy Me A Coffee</a> -->
+  </div>
+  <div id="toLoad"></div>
+  <script type="text/javascript">
+    const dev = true;
+    function toggleCheckbox(e) {
+      $(`#${e.id.replace('-text-', '-checkbox-')}`).trigger('click');
+    }
+  </script>
 </body>
 
 </html>

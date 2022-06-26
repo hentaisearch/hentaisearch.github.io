@@ -1,13 +1,237 @@
+/*! GitHub: github.com/hentaisearch/hentaisearch.github.io */
+/*! Source: /styles/styles.scss */
+/*!                                                        */
+/*!                                                        */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import "./res/transitions.css";
+* {
+  position: relative;
+  font-family: "Source Code Pro", monospace !important;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+  width: 21px;
+  height: 21px;
+}
+@media screen and (max-width: 768px) {
+  input[type=checkbox] {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+#-text-six-digit-codes,
+#-text-stay-on-the-same-tab,
+#-text-link-autosave,
+#-text-darktheme-toggle {
+  user-select: none;
+  cursor: pointer;
+}
+
 body {
+  background-image: url("../assets/bg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #303030;
+  position: relative;
+}
+body #view {
+  height: 100vh;
+}
+@media screen and (max-height: 418px) {
+  body #view {
+    height: 100%;
+  }
+}
+@media screen and (max-height: 418px) {
+  body.bg-to-dark {
+    background-image: none !important;
+    background-color: #1C1B22 !important;
+  }
 }
 
-#container_top {
+#-container-top {
+  padding: 1.5vw;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1.5vw;
 }
 
-/*# sourceMappingURL=styles.css.map */
+#-container-top-left {
+  box-shadow: -1px -1px 8px #000;
+  display: flex;
+  flex-direction: column;
+  border: 8px solid #000;
+  border-radius: 6px;
+  background: #000;
+  color: #fff;
+}
+#-container-top-left #-container-select-domains {
+  flex-direction: column;
+  align-items: flex-start;
+}
+#-container-top-left #-container-select-domains select {
+  width: 100%;
+}
+#-container-top-left div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 3px;
+}
+@media screen and (max-height: 418px) {
+  #-container-top-left {
+    height: 100%;
+  }
+  #-container-top-left * {
+    height: 94%;
+    font-size: 92%;
+  }
+}
+
+#-container-darktheme-toggle {
+  box-shadow: -1px -1px 8px #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  width: 142px;
+  height: 35px;
+  border: 4px solid #000;
+  border-radius: 6px;
+  background: #000;
+  color: #fff;
+}
+
+#-container-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#-container-center *:not(#-button-generate) {
+  margin: 10px;
+}
+@media screen and (min-height: 665px) {
+  #-container-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #-container-center #-button-generate {
+    margin: 10px;
+  }
+}
+@media screen and (max-height: 665px) {
+  #-container-center {
+    margin-top: 8px;
+    position: relative;
+  }
+  #-container-center #-button-generate {
+    border-radius: 20px;
+  }
+}
+
+#-container-title {
+  box-shadow: -1px -1px 5px #000;
+  border: 4px solid #000;
+  border-radius: 6px;
+  height: 45px;
+  background: #000;
+  color: #fff;
+}
+#-container-title #-text-title {
+  font-size: 24px;
+}
+
+#-button-generate {
+  box-shadow: -1px -1px 8px #000;
+  width: 60vw;
+  border-radius: 20px;
+  height: 46px;
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  #-button-generate {
+    width: 80vw;
+    border-radius: 30px;
+  }
+}
+@media screen and (min-aspect-ratio: 21/9) and (min-width: 1920px) {
+  #-button-generate {
+    width: 922px;
+  }
+}
+#-button-generate:focus {
+  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5) !important;
+}
+
+#-container-generating-link {
+  text-align: center;
+  visibility: hidden;
+  background: #000;
+  color: orange;
+  border: 6px solid #000;
+  border-radius: 5px !important;
+  transition: background-color var(--t-in-long), border-color var(--t-in-long);
+}
+#-container-generating-link:hover {
+  background-color: #1C1B22;
+  border-color: #1C1B22;
+  cursor: pointer !important;
+  transition: background-color var(--t-in-short), border-color var(--t-in-short);
+}
+
+#-container-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5vw;
+  background: #000;
+  color: #fff;
+}
+@media screen and (max-height: 418px) {
+  #-container-bottom {
+    margin-top: 10vmax;
+  }
+}
+
+.bg-to-dark {
+  background-color: #1C1B22 !important;
+  transition: background-color var(--t-in-long) !important;
+}
+
+.container-to-dark {
+  background-color: #E0E0E0 !important;
+  color: #000 !important;
+  transition: background-color var(--t-in-long), color var(--t-in-long) !important;
+}
+
+.el-to-dark {
+  box-shadow: -1px -1px 3px #E0E0E0 !important;
+  background-color: #E0E0E0 !important;
+  border-color: #E0E0E0 !important;
+  color: #000 !important;
+  transition: background-color var(--t-in-long), border-color var(--t-in-long), color var(--t-in-long), box-shadow var(--t-in-long) !important;
+}
+.el-to-dark#-container-title {
+  box-shadow: -1px -1px 2px #E0E0E0 !important;
+}
+
+.some-to-dark {
+  background-color: #1C1B22 !important;
+  border-color: #1C1B22 !important;
+  transition: background-color var(--t-in-long), border-color var(--t-in-long);
+}
+.some-to-dark#-container-generating-link:hover {
+  background-color: #000 !important;
+  border-color: #000 !important;
+  transition: background-color var(--t-in-short), border-color var(--t-in-short) !important;
+}
+
+.button-to-dark {
+  box-shadow: none !important;
+}
