@@ -1,0 +1,30 @@
+{
+  "name": "hentaisearch.github.io",
+  "version": "1.0.0",
+  "description": "https://hentaisearch.github.io",
+  "scripts": {
+    "test": "node --version",
+    "sass": "sass --watch --no-source-map styles/styles.scss styles/styles.css",
+    "postcss": "npx postcss styles/styles.css -o styles/styles.post.css --use autoprefixer --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hentaisearch/hentaisearch.github.io.git"
+  },
+  "keywords": [
+    "hentaisearch"
+  ],
+  "author": "hentaisearch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hentaisearch/hentaisearch.github.io/issues"
+  },
+  "homepage": "https://github.com/hentaisearch/hentaisearch.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.17.0",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.52.3"
+  }
+}

@@ -1,0 +1,17 @@
+
+:root {
+    --t-in-longer: calc(.228866s * 2) ease-in-out;
+    --t-out-longer: calc(.3433s * 2) ease-in-out;
+    --t-in-long: calc(.228866s * 1.5) ease-in-out;
+    --t-out-long: calc(.3433s * 1.5) ease-in-out;
+    --t-in: calc(.228866s * 1) ease-in-out;
+    --t-out: calc(.3433s * 1) ease-in-out;
+    --t-in-medium: calc(.228866s / 1.5) ease-in-out;
+    --t-out-medium: calc(.3433s / 1.5) ease-in-out;
+    --t-in-short: calc(.228866s / 2) ease-in-out;
+    --t-out-short: calc(.3433s / 2) ease-in-out;
+    --t-in-short-x: calc(.228866s / 3) ease-in-out;
+    --t-out-short-x: calc(.3433s / 3) ease-in-out;
+    --t-in-short-xx: calc(.228866s / 4) ease-in-out;
+    --t-out-short-xx: calc(.3433s / 4) ease-in-out;
+}
