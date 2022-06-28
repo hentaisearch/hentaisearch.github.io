@@ -17,6 +17,7 @@ $screen-low-height: 665px;
 $screen-lowest-height: 418px;
 $screen-wide-ratio: "21/9";
 $screen-wide-width: 1920px;
+$screen-lowest-width: 342px;
 // -colors
 // --light
 $container-bg-color: #000;
@@ -46,11 +47,11 @@ $dark-container-font-color: #000;
 }
 
 @mixin box-shadow($radius: 8px) {
-  box-shadow: -1px -1px $radius $container-bg-color;
+  box-shadow: 0 0 $radius $container-bg-color;
 }
 
 @mixin box-shadow-dark($radius: 3px) {
-  box-shadow: -1px -1px $radius $dark-container-border-color $i;
+  box-shadow: 0 0 $radius $dark-container-border-color $i;
 }
 
 //!                                                           ===General===
@@ -79,7 +80,7 @@ input[type="checkbox"] {
 }
 
 body {
-  background-image: url("../assets/bg.png");
+  background-image: url("../assets/background.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -106,7 +107,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 1.5vw;
+  row-gap: 1.2vh;
 }
 
 //!                                                           ===Left===
@@ -116,7 +117,7 @@ body {
   display: flex;
   flex-direction: column;
   border: 8px solid $container-border-color;
-  border-radius: 6px;
+  border-radius: 8px;
   background: $container-bg-color;
   color: $container-font-color;
   #-container-select-domains {
@@ -148,7 +149,7 @@ body {
   width: 142px;
   height: 35px;
   border: 4px solid $container-border-color;
-  border-radius: 6px;
+  border-radius: 8px;
   background: $container-bg-color;
   color: $container-font-color;
 }
@@ -178,12 +179,16 @@ body {
       border-radius: 20px;
     }
   }
+  // lower than lowest width
+  @media screen and (max-width: $screen-lowest-width) {
+    margin-top: 10vmax;
+  }
 }
 
 #-container-title {
   @include box-shadow(5px);
   border: 4px solid $container-border-color;
-  border-radius: 6px;
+  border-radius: 8px;
   height: 45px;
   background: $container-bg-color;
   color: $container-font-color;
@@ -217,7 +222,7 @@ body {
   background: $container-bg-color;
   color: orange;
   border: 6px solid $container-border-color;
-  border-radius: 5px $i;
+  border-radius: 7px $i;
   &:hover {
     background-color: $primary;
     border-color: $primary;
@@ -242,6 +247,24 @@ body {
   @media screen and (max-height: $screen-lowest-height) {
     margin-top: 10vmax;
   }
+  &:hover {
+    img {
+      filter: grayscale(10%);
+      transition: filter var(--t-in-long);
+    }
+  }
+}
+
+img {
+  top: -2px;
+  width: 15px;
+  filter: grayscale(100%);
+  transition: filter var(--t-out-medium);
+}
+
+#-text-support > img {
+  border: 2px solid $dark-container-border-color;
+  border-radius: 50%;
 }
 
 //!                                                           ===Dark===
