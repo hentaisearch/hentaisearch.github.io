@@ -1,6 +1,6 @@
- 
-# 👾 HentaiSearch
+⠀
+# 👾 [HentaiSearch](https://hentaisearch.github.io)
 ## ✔️ 2022.0-release
-![HentaiSearch preview](./assets/img-preview.png "Light to dark")
+[![HentaiSearch](./assets/img-preview.png "hentaisearch.github.io | Light to dark")](https://hentaisearch.github.io)
 #### 💬 Updates: [t.me/hentaisearchdev](https://t.me/hentaisearchdev)
-#### [☕ Buy Me a Coffee](https://www.buymeacoffee.com/hentaisearch)
+#### ☕ [Buy Me a Coffee](https://www.buymeacoffee.com/hentaisearch) 
