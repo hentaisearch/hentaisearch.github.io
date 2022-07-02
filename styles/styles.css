@@ -30,7 +30,7 @@ input[type=checkbox] {
 }
 
 body {
-  background-image: url("../assets/background.png");
+  background-image: url("../assets/img-background.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -204,20 +204,28 @@ body #view {
   }
 }
 #-container-bottom:hover img {
-  filter: grayscale(10%);
+  filter: grayscale(15%);
   transition: filter var(--t-in-long);
 }
 
 img {
   top: -2px;
   width: 15px;
-  filter: grayscale(100%);
+  filter: grayscale(80%);
   transition: filter var(--t-out-medium);
 }
 
+#-href-bmac > img {
+  width: 16px !important;
+}
+
 #-text-support > img {
-  border: 2px solid #E0E0E0;
-  border-radius: 50%;
+  border: 1px dashed #fff;
+}
+
+.container-to-dark #-text-support > img {
+  border-style: solid !important;
+  border-color: #EC2854 !important;
 }
 
 .bg-to-dark {
