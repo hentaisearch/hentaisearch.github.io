@@ -1,6 +1,6 @@
 {
   "name": "hentaisearch.github.io",
-  "version": "1.0.0",
+  "version": "2022.0.1",
   "description": "https://hentaisearch.github.io",
   "scripts": {
     "test": "node --version",
@@ -15,7 +15,7 @@
     "hentaisearch"
   ],
   "author": "hentaisearch",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hentaisearch/hentaisearch.github.io/issues"
   },
